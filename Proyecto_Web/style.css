@@ -34,12 +34,12 @@ body {
 }
 
 .hero-inner {
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 3.5rem;
   letter-spacing: 0.05em;
 }
 
@@ -59,11 +59,73 @@ body {
   max-width: 600px;
   color: var(--muted);
   font-size: 1.1rem;
+  line-height: 1.5;
 }
 
+/* --- NUEVA SECCIÓN INFO (NFC Y LLAVEROS) --- */
+.info-section {
+  max-width: 1220px;
+  margin: 3rem auto 1rem;
+  padding: 0 1.5rem;
+}
+
+.info-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.info-box {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.info-box::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #00d4ff, #7928ca, #ff007f, #7928ca, #00d4ff);
+  background-size: 300% auto;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: holo-gradient 6s linear infinite;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  border-color: transparent;
+}
+
+.info-box:hover::before {
+  opacity: 0.6; /* Efecto holográfico más suave que en las tarjetas */
+}
+
+.info-box h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  background: linear-gradient(90deg, #fff, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.info-box p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* --- CATÁLOGO --- */
 .catalogo {
   max-width: 1220px;
-  margin: 2rem auto 3rem;
+  margin: 3rem auto;
   padding: 0 1.5rem;
 }
 
@@ -84,7 +146,7 @@ body {
   padding: 0.6rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--border-color);
-  background: var(--panel-bg);
+  background: var(--bg-color);
   color: var(--contrast);
   width: 250px;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -139,7 +201,7 @@ body {
 }
 
 .card:hover {
-  border-color: transparent; /* Deja ver el borde holográfico */
+  border-color: transparent;
 }
 
 .card-link {
@@ -238,18 +300,74 @@ body {
   opacity: 1;
 }
 
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: #4a506b;
+/* --- FOOTER ACTUALIZADO --- */
+.site-footer {
+  background: #0a0b10;
   border-top: 1px solid var(--border-color);
-  margin-top: 3rem;
+  padding: 4rem 1.5rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h4 {
+  color: var(--contrast);
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.footer-section p {
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.social-link:hover {
+  color: #ff007f;
+  text-shadow: 0 0 12px rgba(255, 0, 127, 0.4);
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #4a506b;
+  font-size: 0.9rem;
+  border-top: 1px solid #161822;
+  padding-top: 2rem;
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.2rem; }
+  .hero h1 { font-size: 2.5rem; }
   .filtros { justify-content: center; }
   .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .footer-content { flex-direction: column; gap: 2rem; }
 }
 
 @media (max-width: 480px) {

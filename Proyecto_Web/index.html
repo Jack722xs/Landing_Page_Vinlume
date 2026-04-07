@@ -10,89 +10,124 @@
   <header class="hero">
     <div class="hero-inner">
       <h1 class="holo-text">Vinlume Disk</h1>
-      <p>Catálogo moderno de llaveros CDs exclusivos. Busca, elige y disfruta la mejor música en formato físico.</p>
+      <p>Catálogo moderno de llaveros CDs exclusivos. Busca, elige y disfruta la mejor música en formato físico y digital a la vez.</p>
     </div>
   </header>
 
-  <main class="catalogo">
-    <section class="filtros" aria-label="filtros de catálogo">
-      <label for="buscar">Buscar CD</label>
-      <input id="buscar" type="search" placeholder="Ej. Rock clásico" />
+  <main>
+    <section class="info-section">
+      <div class="info-container">
+        <div class="info-box">
+          <h2>¿Qué son nuestros llaveros?</h2>
+          <p>Llevamos tus discos favoritos a la palma de tu mano. Nuestros llaveros son réplicas en miniatura de los CDs más icónicos de la historia. Están fabricados con acrílico de alta durabilidad y detalles de impresión precisos para que luzcas tu pasión musical donde quiera que vayas.</p>
+        </div>
+        <div class="info-box">
+          <h2>La Magia del NFC</h2>
+          <p>NFC (<em>Near Field Communication</em>) es la tecnología que da vida a nuestros llaveros. Cada mini CD contiene un chip invisible que, al acercarlo a tu smartphone, abre instantáneamente el álbum o la playlist en tu aplicación de música (Spotify, Apple Music, etc.). ¡Sin cables, sin búsquedas, solo música al instante!</p>
+        </div>
+      </div>
     </section>
 
-    <section class="grid" role="list">
-      <article class="card holo-card" role="listitem">
-        <a href="#cd1" class="card-link" aria-label="Ver detalles de Rage Against the Machine">
-          <img src="images/rage again the machine/homonimo/rageA.webp" alt="Rage Against the Machine - Homónimo" />
-          <div class="card-body">
-            <h2>Homonimo</h2>
-            <p class="artista">Rage Against the Machine</p>
-            <p class="precio">CLP 4.990</p>
-          </div>
-        </a>
-      </article>
+    <div class="catalogo">
+      <section class="filtros" aria-label="filtros de catálogo">
+        <label for="buscar">Buscar CD</label>
+        <input id="buscar" type="search" placeholder="Ej. Rock alternativo" />
+      </section>
 
-      <article class="card holo-card" role="listitem">
-        <a href="#cd2" class="card-link" aria-label="Ver detalles de Twenty One Pilots">
-          <img src="images/top/homonimo/top1.webp" alt="Twenty One Pilots - Homónimo" />
-          <div class="card-body">
-            <h2>Homonimo</h2>
-            <p class="artista">Twenty One Pilots</p>
-            <p class="precio">CLP 4.990</p>
-          </div>
-        </a>
-      </article>
+      <section class="grid" role="list">
+        <article class="card holo-card" role="listitem">
+          <a href="#cd1" class="card-link" aria-label="Ver detalles de Rage Against the Machine">
+            <img src="images/rage again the machine/homonimo/rageA.webp" alt="Rage Against the Machine - Homónimo" />
+            <div class="card-body">
+              <h2>Homonimo</h2>
+              <p class="artista">Rage Against the Machine</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
 
-      <article class="card holo-card" role="listitem">
-        <a href="#cd3" class="card-link" aria-label="Ver detalles de Los Bunkers">
-          <img src="images/los bunkers/homonimo/BK1.jpg" alt="Los Bunkers - Homónimo" />
-          <div class="card-body">
-            <h2>Homonimo</h2>
-            <p class="artista">Los Bunkers</p>
-            <p class="precio">CLP 4.990</p>
-          </div>
-        </a>
-      </article>
+        <article class="card holo-card" role="listitem">
+          <a href="#cd2" class="card-link" aria-label="Ver detalles de Twenty One Pilots">
+            <img src="images/top/homonimo/top1.webp" alt="Twenty One Pilots - Homónimo" />
+            <div class="card-body">
+              <h2>Homonimo</h2>
+              <p class="artista">Twenty One Pilots</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
 
-      <article class="card holo-card" role="listitem">
-        <a href="#cd4" class="card-link" aria-label="Ver detalles de Ado Utattemita">
-          <img src="images/Ado/utattemita/ado1.jpg" alt="Ado - Utattemita" />
-          <div class="card-body">
-            <h2>Utattemita</h2>
-            <p class="artista">Ado</p>
-            <p class="precio">CLP 4.990</p>
-          </div>
-        </a>
-      </article>
-    </section>
+        <article class="card holo-card" role="listitem">
+          <a href="#cd3" class="card-link" aria-label="Ver detalles de Los Bunkers">
+            <img src="images/los bunkers/homonimo/BK1.jpg" alt="Los Bunkers - Homónimo" />
+            <div class="card-body">
+              <h2>Homonimo</h2>
+              <p class="artista">Los Bunkers</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
 
-    <section class="detalles" id="cd1">
-      <h3>Rage Against the Machine - Homonimo</h3>
-      <p>El explosivo álbum debut que definió el rap metal, combinando potentes riffs con letras de crítica social inquebrantable.</p>
-      <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-    </section>
+        <article class="card holo-card" role="listitem">
+          <a href="#cd4" class="card-link" aria-label="Ver detalles de Ado Utattemita">
+            <img src="images/Ado/utattemita/ado1.jpg" alt="Ado - Utattemita" />
+            <div class="card-body">
+              <h2>Utattemita</h2>
+              <p class="artista">Ado</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
+      </section>
 
-    <section class="detalles" id="cd2">
-      <h3>Twenty One Pilots - Homonimo</h3>
-      <p>El álbum debut independiente que sentó las bases de su sonido alternativo, lleno de líricas introspectivas y pianos melancólicos.</p>
-      <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-    </section>
+      <section class="detalles" id="cd1">
+        <h3>Rage Against the Machine - Homonimo</h3>
+        <p>El explosivo álbum debut que definió el rap metal, combinando potentes riffs con letras de crítica social inquebrantable.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
 
-    <section class="detalles" id="cd3">
-      <h3>Los Bunkers - Homonimo</h3>
-      <p>El disco debut que marcó el inicio de una de las bandas más importantes del rock alternativo, cargado de energía y clásicos.</p>
-      <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-    </section>
+      <section class="detalles" id="cd2">
+        <h3>Twenty One Pilots - Homonimo</h3>
+        <p>El álbum debut independiente que sentó las bases de su sonido alternativo, lleno de líricas introspectivas y pianos melancólicos.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
 
-    <section class="detalles" id="cd4">
-      <h3>Ado - Utattemita</h3>
-      <p>Un álbum recopilatorio de covers donde la inconfundible y versátil voz de Ado reinventa éxitos y clásicos de Vocaloid.</p>
-      <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-    </section>
+      <section class="detalles" id="cd3">
+        <h3>Los Bunkers - Homonimo</h3>
+        <p>El disco debut que marcó el inicio de una de las bandas más importantes del rock alternativo, cargado de energía y clásicos.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
+
+      <section class="detalles" id="cd4">
+        <h3>Ado - Utattemita</h3>
+        <p>Un álbum recopilatorio de covers donde la inconfundible y versátil voz de Ado reinventa éxitos y clásicos de Vocaloid.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Vinlume Disk. Llaveros musicales exclusivos.</p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Vinlume Disk</h4>
+        <p>Transformando la forma en que interactúas con tu música. Hecho para verdaderos fanáticos.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p>Email: contacto@vinlumedisk.cl</p>
+        <p>WhatsApp: +56 9 1234 5678</p>
+      </div>
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vinlume Disk. Todos los derechos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>
