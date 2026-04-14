@@ -87,7 +87,7 @@ main > section {
   color: var(--contrast);
 }
 
-/* --- TÍTULO CLAVADO (STICKY) --- */
+/* --- TÍTULO CLAVADO --- */
 .sticky-title {
   position: sticky;
   top: 65px; /* Se queda pegado justo debajo de la barra de navegación */
@@ -96,7 +96,7 @@ main > section {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: 1.5rem 0;
-  margin-bottom: 3rem; /* Espacio modificado para empujar los filtros correctamente */
+  margin-bottom: 3rem;
   margin-top: -1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
