@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vinlume Disk - Catálogo de CDs</title>
-  <link rel="icon" href="../logos/LOGO VND NEGRO.jpg" type="image/jpeg">
+  <link rel="icon" href="logos/LOGO VND NEGRO.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,6 +16,7 @@
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#proceso">Cómo Funciona</a></li>
+        <li><a href="#tecnologia">Tecnología NFC</a></li>
         <li><a href="#catalogo">Catálogo</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -52,15 +53,36 @@
       </div>
     </section>
 
-    <section class="info-section">
-      <div class="info-container">
-        <div class="info-box">
-          <h2>¿Qué son nuestros llaveros?</h2>
-          <p>Llevamos tus discos favoritos a la palma de tu mano. Nuestros llaveros son réplicas en miniatura de los CDs más icónicos de la historia. Están fabricados con acrílico de alta durabilidad y detalles de impresión precisos para que luzcas tu pasión musical donde quiera que vayas.</p>
+    <section class="nfc-showcase" id="tecnologia">
+      <h2 class="section-title">El poder del NFC</h2>
+      
+      <div class="showcase-row">
+        <div class="showcase-img">
+          <img src="images/NFC/NFC-chip-compra-Tomas-Schantl.jpg" alt="Microchip NFC integrado" />
         </div>
-        <div class="info-box">
-          <h2>La Magia del NFC</h2>
-          <p>NFC (Near Field Communication) es la tecnología que da vida a nuestros llaveros. Cada mini CD contiene un chip invisible que, al acercarlo a tu smartphone, abre instantáneamente el álbum o la playlist en tu aplicación de música (Spotify, Apple Music, etc.). ¡Sin cables, sin búsquedas, solo música al instante!</p>
+        <div class="showcase-text">
+          <h3>¿Qué es la Tecnología NFC?</h3>
+          <p>NFC (Near Field Communication) permite la transmisión de datos a corta distancia de forma instantánea. Nuestros llaveros integran un microchip pasivo que no requiere baterías ni recargas; se alimenta directamente de la energía electromagnética que emite tu teléfono al acercarlo.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row reverse">
+        <div class="showcase-img">
+          <img src="images/NFC/shutterstock_2125284209.webp" alt="Compatibilidad con Smartphone" />
+        </div>
+        <div class="showcase-text">
+          <h3>Compatibilidad Universal</h3>
+          <p>La inmensa mayoría de los smartphones actuales son compatibles de forma nativa. En los dispositivos Android, el lector suele ubicarse en el centro de la parte trasera, mientras que en los iPhone se encuentra en la parte superior, junto a las cámaras. No necesitas instalar absolutamente ninguna aplicación adicional.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row">
+        <div class="showcase-img">
+          <img src="images/NFC/RouteNote-Stores-1280x866-1.png" alt="Conexión Directa a Música" />
+        </div>
+        <div class="showcase-text">
+          <h3>Conexión Directa a tu Música</h3>
+          <p>Al escanear el llavero, el chip envía un enlace codificado que ordena a tu teléfono abrir tu aplicación de música favorita (como Spotify, Apple Music o YouTube) y comenzar a reproducir el álbum al instante. Es el puente definitivo entre el coleccionismo físico y la comodidad digital.</p>
         </div>
       </div>
     </section>
@@ -73,140 +95,148 @@
 
       <section class="grid" role="list">
         <article class="card holo-card" role="listitem">
-          <a href="#cd1" class="card-link" aria-label="Ver detalles de Rage Against the Machine">
-            <img src="images/rage again the machine/homonimo/rageA.webp" alt="Rage Against the Machine - Homónimo" />
-            <div class="card-body">
-              <h2>Homonimo</h2>
-              <p class="artista">Rage Against the Machine</p>
+          <div class="card-image">
+            <img src="images/rage again the machine/homonimo/rageA.webp" alt="Rage Against the Machine" />
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>Homonimo</h2>
+            <p class="artista">Rage Against the Machine</p>
+            <div class="tags"><span class="tag">Rap Metal</span><span class="tag">Rock</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="card holo-card" role="listitem">
-          <a href="#cd2" class="card-link" aria-label="Ver detalles de Twenty One Pilots">
-            <img src="images/top/homonimo/top1.webp" alt="Twenty One Pilots - Homónimo" />
-            <div class="card-body">
-              <h2>Homonimo</h2>
-              <p class="artista">Twenty One Pilots</p>
+          <div class="card-image">
+            <img src="images/top/homonimo/top1.webp" alt="Twenty One Pilots" />
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>Homonimo</h2>
+            <p class="artista">Twenty One Pilots</p>
+            <div class="tags"><span class="tag">Alternative</span><span class="tag">Indie Pop</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="card holo-card" role="listitem">
-          <a href="#cd3" class="card-link" aria-label="Ver detalles de Los Bunkers">
-            <img src="images/los bunkers/homonimo/BK1.jpg" alt="Los Bunkers - Homónimo" />
-            <div class="card-body">
-              <h2>Homonimo</h2>
-              <p class="artista">Los Bunkers</p>
+          <div class="card-image">
+            <img src="images/los bunkers/homonimo/BK1.jpg" alt="Los Bunkers" />
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>Homonimo</h2>
+            <p class="artista">Los Bunkers</p>
+            <div class="tags"><span class="tag">Rock Chileno</span><span class="tag">Indie</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="card holo-card" role="listitem">
-          <a href="#cd4" class="card-link" aria-label="Ver detalles de Ado Utattemita">
+          <div class="card-image">
             <img src="images/Ado/utattemita/ado1.jpg" alt="Ado - Utattemita" />
-            <div class="card-body">
-              <h2>Utattemita</h2>
-              <p class="artista">Ado</p>
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>Utattemita</h2>
+            <p class="artista">Ado</p>
+            <div class="tags"><span class="tag">J-Pop</span><span class="tag">Vocaloid</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="card holo-card" role="listitem">
-          <a href="#cd5" class="card-link" aria-label="Ver detalles de Bikini Kill">
-            <img src="images/bikini kill/The First two records/The First1.webp" alt="Bikini Kill - The First Two Records" />
-            <div class="card-body">
-              <h2>The First Two Records</h2>
-              <p class="artista">Bikini Kill</p>
+          <div class="card-image">
+            <img src="images/bikini kill/The First two records/The First1.webp" alt="Bikini Kill" />
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>The First Two Records</h2>
+            <p class="artista">Bikini Kill</p>
+            <div class="tags"><span class="tag">Punk</span><span class="tag">Riot Grrrl</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="card holo-card" role="listitem">
-          <a href="#cd6" class="card-link" aria-label="Ver detalles de Cuarteto de Nos">
-            <img src="images/cuarteto de nos/habla tu espejo/1.jpg" alt="Cuarteto de Nos - Habla Tu Espejo" />
-            <div class="card-body">
-              <h2>Habla Tu Espejo</h2>
-              <p class="artista">Cuarteto de Nos</p>
+          <div class="card-image">
+            <img src="images/cuarteto de nos/habla tu espejo/1.jpg" alt="Cuarteto de Nos" />
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>Habla Tu Espejo</h2>
+            <p class="artista">Cuarteto de Nos</p>
+            <div class="tags"><span class="tag">Art Rock</span><span class="tag">Post-Punk</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="card holo-card" role="listitem">
-          <a href="#cd7" class="card-link" aria-label="Ver detalles de Twenty One Pilots Blurryface">
+          <div class="card-image">
             <img src="images/top/blurryface/blurry1.jpg" alt="Twenty One Pilots - Blurryface" />
-            <div class="card-body">
-              <h2>Blurryface</h2>
-              <p class="artista">Twenty One Pilots</p>
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>Blurryface</h2>
+            <p class="artista">Twenty One Pilots</p>
+            <div class="tags"><span class="tag">Alternative</span><span class="tag">Hip Hop</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
 
         <article class="card holo-card" role="listitem">
-          <a href="#cd8" class="card-link" aria-label="Ver detalles de Twenty One Pilots Breach">
+          <div class="card-image">
             <img src="images/top/breach/breach1.jpg" alt="Twenty One Pilots - Breach" />
-            <div class="card-body">
-              <h2>Breach</h2>
-              <p class="artista">Twenty One Pilots</p>
+            <button class="fav-btn" aria-label="Añadir a favoritos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2>Breach</h2>
+            <p class="artista">Twenty One Pilots</p>
+            <div class="tags"><span class="tag">Rock Alternativo</span><span class="tag">Concept</span></div>
+            <div class="card-footer">
               <p class="precio">CLP 4.990</p>
+              <button class="btn buy-btn">Comprar</button>
             </div>
-          </a>
+          </div>
         </article>
-      </section>
-
-      <section class="detalles" id="cd1">
-        <h3>Rage Against the Machine - Homonimo</h3>
-        <p>El explosivo álbum debut que definió el rap metal, combinando potentes riffs con letras de crítica social inquebrantable.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-      </section>
-
-      <section class="detalles" id="cd2">
-        <h3>Twenty One Pilots - Homonimo</h3>
-        <p>El álbum debut independiente que sentó las bases de su sonido alternativo, lleno de líricas introspectivas y pianos melancólicos.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-      </section>
-
-      <section class="detalles" id="cd3">
-        <h3>Los Bunkers - Homonimo</h3>
-        <p>El disco debut que marcó el inicio de una de las bandas más importantes del rock alternativo, cargado de energía y clásicos.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-      </section>
-
-      <section class="detalles" id="cd4">
-        <h3>Ado - Utattemita</h3>
-        <p>Un álbum recopilatorio de covers donde la inconfundible y versátil voz de Ado reinventa éxitos y clásicos de Vocaloid.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-      </section>
-
-      <section class="detalles" id="cd5">
-        <h3>Bikini Kill - The First Two Records</h3>
-        <p>Una recopilación icónica que captura la energía cruda y el espíritu inquebrantable del movimiento riot grrrl.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-      </section>
-
-      <section class="detalles" id="cd6">
-        <h3>Cuarteto de Nos - Habla Tu Espejo</h3>
-        <p>Un álbum profundamente personal y reflexivo que muestra una de las facetas más emocionales y maduras de la banda.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-      </section>
-
-      <section class="detalles" id="cd7">
-        <h3>Twenty One Pilots - Blurryface</h3>
-        <p>El exitoso álbum conceptual que fusiona múltiples géneros para explorar las inseguridades a través de un sonido inconfundible.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
-      </section>
-
-      <section class="detalles" id="cd8">
-        <h3>Twenty One Pilots - Breach</h3>
-        <p>Una excelente adición a la colección de llaveros para llevar siempre contigo un pedazo del universo musical del dúo.</p>
-        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
       </section>
     </div>
 
@@ -220,6 +250,18 @@
         <details class="faq-item">
           <summary>¿Hacen envíos a regiones?</summary>
           <p>Realizamos envíos a todo Chile a través de Starken o Chilexpress, con seguimiento en tiempo real.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Puedo solicitar un álbum personalizado?</summary>
+          <p>¡Absolutamente! Si tu álbum, playlist o artista favorito no está en nuestro catálogo, escríbenos por Instagram o WhatsApp y fabricaremos uno exclusivo para ti.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuánto tiempo demora la fabricación?</summary>
+          <p>Los pedidos personalizados toman entre 3 a 5 días hábiles de producción antes de ser despachados.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Se raya o se borra la imagen con el tiempo?</summary>
+          <p>No, la impresión está encapsulada dentro del acrílico de alta durabilidad, por lo que la imagen está protegida de rayones y del desgaste por el uso diario.</p>
         </details>
       </div>
     </section>
@@ -239,8 +281,7 @@
       <div class="footer-section">
         <h4>Síguenos</h4>
         <div class="social-links">
-          <a href="#" class="social-link">Instagram</a>
-          <a href="#" class="social-link">TikTok</a>
+          <a href="https://www.instagram.com/vinlume_disk/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
         </div>
       </div>
     </div>
@@ -248,5 +289,16 @@
       <p>&copy; 2026 Vinlume Disk. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fav-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          btn.classList.toggle('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
