@@ -444,3 +444,22 @@ body {
   .nav-links { display: none; } /* En móvil se podría implementar un menú hamburguesa luego */
   .grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
+
+/* --- EASTER EGG: PORTAL SECRETO --- */
+.secret-portal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  z-index: 9999;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+  border-top-left-radius: 100%;
+}
+
+.secret-portal:hover {
+  background: radial-gradient(circle at bottom right, rgba(157, 78, 221, 0.4) 0%, transparent 70%);
+  opacity: 1;
+}
