@@ -1,21 +1,21 @@
-﻿* { 
-  box-sizing: border-box; 
-}
-
+﻿/* --- VARIABLES Y CONFIGURACIÓN BASE --- */
 :root {
   --bg-color: #050507;
   --panel-bg: #11131a;
   --contrast: #f4f5f8;
-  --accent: #9d4edd;
-  --muted: #8b95b1;
+  /* Ajuste AA: Púrpura con mayor luminosidad para legibilidad (Contraste 4.5:1) */
+  --accent: #b379f2; 
+  /* Ajuste AA: Gris más claro para que el texto secundario sea legible */
+  --muted: #a1accb; 
   --border-color: #2a2d3d;
 }
 
-/* Animación Holográfica Base */
-@keyframes holo-gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+* { 
+  box-sizing: border-box; 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +26,61 @@ body {
   min-height: 100vh;
 }
 
+/* Animación Holográfica */
+@keyframes holo-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- BARRA DE NAVEGACIÓN (STICKY) --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(5, 5, 7, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* --- HERO SECTION --- */
 .hero {
   padding: 0;
   text-align: center;
@@ -34,7 +89,7 @@ body {
 }
 
 .hero-inner {
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
 }
 
 .hero h1 {
@@ -43,7 +98,6 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Efecto Holográfico en Texto */
 .holo-text {
   background: linear-gradient(90deg, #ff007f, #7928ca, #00d4ff, #42ff7b, #ff007f);
   background-size: 300% auto;
@@ -55,17 +109,80 @@ body {
 }
 
 .hero p {
-  margin: 1rem auto 0;
+  margin: 1.5rem auto 2rem;
   max-width: 600px;
   color: var(--muted);
   font-size: 1.1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* --- NUEVA SECCIÓN INFO (NFC Y LLAVEROS) --- */
+/* --- SECCIÓN PROCESO (COMO FUNCIONA) --- */
+.proceso-section {
+  max-width: 1220px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3.5rem;
+  background: linear-gradient(90deg, #fff, var(--muted));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.proceso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.proceso-step {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--panel-bg);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.proceso-step:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.step-number {
+  width: 55px;
+  height: 55px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-weight: 800;
+  font-size: 1.3rem;
+  box-shadow: 0 0 20px rgba(179, 121, 242, 0.4);
+}
+
+.proceso-step h3 {
+  margin-bottom: 1rem;
+  color: var(--contrast);
+}
+
+.proceso-step p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- SECCIÓN INFO (ORIGINAL) --- */
 .info-section {
   max-width: 1220px;
-  margin: 3rem auto 1rem;
+  margin: 4rem auto;
   padding: 0 1.5rem;
 }
 
@@ -82,38 +199,12 @@ body {
   padding: 2rem;
   position: relative;
   z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.info-box::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: 18px;
-  background: linear-gradient(90deg, #00d4ff, #7928ca, #ff007f, #7928ca, #00d4ff);
-  background-size: 300% auto;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  animation: holo-gradient 6s linear infinite;
-}
-
-.info-box:hover {
-  transform: translateY(-5px);
-  border-color: transparent;
-}
-
-.info-box:hover::before {
-  opacity: 0.6; /* Efecto holográfico más suave que en las tarjetas */
 }
 
 .info-box h2 {
   margin-top: 0;
   font-size: 1.4rem;
-  background: linear-gradient(90deg, #fff, var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 .info-box p {
@@ -125,7 +216,7 @@ body {
 /* --- CATÁLOGO --- */
 .catalogo {
   max-width: 1220px;
-  margin: 3rem auto;
+  margin: 5rem auto;
   padding: 0 1.5rem;
 }
 
@@ -134,37 +225,31 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.filtros label {
-  color: var(--muted);
-  font-weight: 500;
+  margin-bottom: 2.5rem;
 }
 
 .filtros input {
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 999px;
   border: 1px solid var(--border-color);
   background: var(--bg-color);
   color: var(--contrast);
-  width: 250px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 280px;
+  transition: all 0.3s ease;
 }
 
 .filtros input:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 10px rgba(157, 78, 221, 0.3);
+  box-shadow: 0 0 15px rgba(157, 78, 221, 0.2);
 }
 
 .grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-/* Tarjetas y Efecto Holográfico de Borde */
 .holo-card {
   position: relative;
   border-radius: 16px;
@@ -187,7 +272,7 @@ body {
 }
 
 .holo-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 }
 
 .holo-card:hover::before {
@@ -197,18 +282,12 @@ body {
 .card {
   border: 1px solid var(--border-color);
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.card:hover {
-  border-color: transparent;
 }
 
 .card-link {
   color: inherit;
   text-decoration: none;
   display: block;
-  height: 100%;
   background: var(--panel-bg);
   border-radius: 15px;
   overflow: hidden;
@@ -216,96 +295,112 @@ body {
 
 .card img {
   width: 100%;
-  height: 240px;
+  height: 260px;
   object-fit: cover;
   border-bottom: 1px solid var(--border-color);
 }
 
 .card-body {
-  padding: 1.2rem;
+  padding: 1.5rem;
 }
 
 .card-body h2 {
   margin: 0;
-  font-size: 1.2rem;
-  color: var(--contrast);
+  font-size: 1.25rem;
 }
 
 .artista {
-  margin: 0.3rem 0 0.8rem;
+  margin: 0.4rem 0 1rem;
   color: var(--muted);
-  font-size: 0.95rem;
 }
 
 .precio {
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--accent);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .detalles {
   background: var(--panel-bg);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 2rem;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 
-.detalles h3 {
-  margin: 0 0 0.5rem;
-  color: #fff;
-}
-
-.detalles p {
-  margin: 0 0 1.2rem;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-/* Botón Holográfico */
+/* --- BOTÓN --- */
 .btn {
   display: inline-block;
-  padding: 0.7rem 1.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 999px;
-  border: none;
   background: var(--accent);
-  color: #fff;
-  font-weight: 600;
+  color: #000;
+  font-weight: 700;
   text-decoration: none;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(90deg, #ff007f, #7928ca, #00d4ff, #42ff7b, #ff007f);
-  background-size: 300% auto;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  animation: holo-gradient 3s linear infinite;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(157, 78, 221, 0.5);
+  box-shadow: 0 0 20px rgba(179, 121, 242, 0.5);
 }
 
-.btn:hover::before {
-  opacity: 1;
+/* --- FAQ --- */
+.faq-section {
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
 }
 
-/* --- FOOTER ACTUALIZADO --- */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--contrast);
+  padding: 0.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+}
+
+.faq-item p {
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* --- FOOTER --- */
 .site-footer {
   background: #0a0b10;
   border-top: 1px solid var(--border-color);
   padding: 4rem 1.5rem 2rem;
-  margin-top: 4rem;
 }
 
 .footer-content {
@@ -315,62 +410,37 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
 }
 
 .footer-section h4 {
+  margin-bottom: 1.5rem;
   color: var(--contrast);
-  font-size: 1.2rem;
-  margin-top: 0;
-  margin-bottom: 1.2rem;
 }
 
 .footer-section p {
   color: var(--muted);
-  line-height: 1.5;
-  margin: 0.5rem 0;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
+  font-size: 0.95rem;
 }
 
 .social-link {
   color: var(--accent);
   text-decoration: none;
+  margin-right: 1.5rem;
   font-weight: 600;
-  transition: color 0.3s, text-shadow 0.3s;
-}
-
-.social-link:hover {
-  color: #ff007f;
-  text-shadow: 0 0 12px rgba(255, 0, 127, 0.4);
 }
 
 .footer-bottom {
   text-align: center;
-  color: #4a506b;
-  font-size: 0.9rem;
-  border-top: 1px solid #161822;
+  margin-top: 4rem;
   padding-top: 2rem;
-  max-width: 1220px;
-  margin: 0 auto;
+  border-top: 1px solid #161822;
+  color: #4a506b;
+  font-size: 0.85rem;
 }
 
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.5rem; }
-  .filtros { justify-content: center; }
-  .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-  .footer-content { flex-direction: column; gap: 2rem; }
-}
-
-@media (max-width: 480px) {
-  .filtros { flex-direction: column; align-items: stretch; }
-  .filtros input { width: 100%; }
+  .nav-links { display: none; } /* En móvil se podría implementar un menú hamburguesa luego */
+  .grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }

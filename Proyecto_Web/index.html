@@ -4,17 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vinlume Disk - Catálogo de CDs</title>
+  <link rel="icon" href="../logos/LOGO VND NEGRO.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo holo-text">Vinlume</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proceso">Cómo Funciona</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="inicio">
     <div class="hero-inner">
       <h1 class="holo-text">Vinlume Disk</h1>
-      <p>Catálogo moderno de llaveros CDs exclusivos. Busca, elige y disfruta la mejor música en formato físico y digital a la vez.</p>
+      <p>La evolución de tu música favorita. Réplicas artesanales con tecnología NFC para conectar tu mundo físico con tu biblioteca digital.</p>
+      <a href="#catalogo" class="btn">Explorar Catálogo</a>
     </div>
   </header>
 
   <main>
+    <section class="proceso-section" id="proceso">
+      <h2 class="section-title">Tu música en 3 pasos</h2>
+      <div class="proceso-grid">
+        <div class="proceso-step">
+          <div class="step-number">1</div>
+          <h3>Elige tu Álbum</h3>
+          <p>Selecciona entre nuestros diseños clásicos o solicita uno personalizado.</p>
+        </div>
+        <div class="proceso-step">
+          <div class="step-number">2</div>
+          <h3>Recibe el Llavero</h3>
+          <p>Réplicas en acrílico de alta calidad con impresión premium y chip NFC integrado.</p>
+        </div>
+        <div class="proceso-step">
+          <div class="step-number">3</div>
+          <h3>Acerca y Disfruta</h3>
+          <p>Solo acerca tu teléfono al mini CD y tu música comenzará a sonar al instante.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="info-section">
       <div class="info-container">
         <div class="info-box">
@@ -23,12 +58,12 @@
         </div>
         <div class="info-box">
           <h2>La Magia del NFC</h2>
-          <p>NFC (<em>Near Field Communication</em>) es la tecnología que da vida a nuestros llaveros. Cada mini CD contiene un chip invisible que, al acercarlo a tu smartphone, abre instantáneamente el álbum o la playlist en tu aplicación de música (Spotify, Apple Music, etc.). ¡Sin cables, sin búsquedas, solo música al instante!</p>
+          <p>NFC (Near Field Communication) es la tecnología que da vida a nuestros llaveros. Cada mini CD contiene un chip invisible que, al acercarlo a tu smartphone, abre instantáneamente el álbum o la playlist en tu aplicación de música (Spotify, Apple Music, etc.). ¡Sin cables, sin búsquedas, solo música al instante!</p>
         </div>
       </div>
     </section>
 
-    <div class="catalogo">
+    <div class="catalogo" id="catalogo">
       <section class="filtros" aria-label="filtros de catálogo">
         <label for="buscar">Buscar CD</label>
         <input id="buscar" type="search" placeholder="Ej. Rock alternativo" />
@@ -78,6 +113,50 @@
             </div>
           </a>
         </article>
+
+        <article class="card holo-card" role="listitem">
+          <a href="#cd5" class="card-link" aria-label="Ver detalles de Bikini Kill">
+            <img src="images/bikini kill/The First two records/The First1.webp" alt="Bikini Kill - The First Two Records" />
+            <div class="card-body">
+              <h2>The First Two Records</h2>
+              <p class="artista">Bikini Kill</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card holo-card" role="listitem">
+          <a href="#cd6" class="card-link" aria-label="Ver detalles de Cuarteto de Nos">
+            <img src="images/cuarteto de nos/habla tu espejo/1.jpg" alt="Cuarteto de Nos - Habla Tu Espejo" />
+            <div class="card-body">
+              <h2>Habla Tu Espejo</h2>
+              <p class="artista">Cuarteto de Nos</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card holo-card" role="listitem">
+          <a href="#cd7" class="card-link" aria-label="Ver detalles de Twenty One Pilots Blurryface">
+            <img src="images/top/blurryface/blurry1.jpg" alt="Twenty One Pilots - Blurryface" />
+            <div class="card-body">
+              <h2>Blurryface</h2>
+              <p class="artista">Twenty One Pilots</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card holo-card" role="listitem">
+          <a href="#cd8" class="card-link" aria-label="Ver detalles de Twenty One Pilots Breach">
+            <img src="images/top/breach/breach1.jpg" alt="Twenty One Pilots - Breach" />
+            <div class="card-body">
+              <h2>Breach</h2>
+              <p class="artista">Twenty One Pilots</p>
+              <p class="precio">CLP 4.990</p>
+            </div>
+          </a>
+        </article>
       </section>
 
       <section class="detalles" id="cd1">
@@ -103,7 +182,45 @@
         <p>Un álbum recopilatorio de covers donde la inconfundible y versátil voz de Ado reinventa éxitos y clásicos de Vocaloid.</p>
         <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
       </section>
+
+      <section class="detalles" id="cd5">
+        <h3>Bikini Kill - The First Two Records</h3>
+        <p>Una recopilación icónica que captura la energía cruda y el espíritu inquebrantable del movimiento riot grrrl.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
+
+      <section class="detalles" id="cd6">
+        <h3>Cuarteto de Nos - Habla Tu Espejo</h3>
+        <p>Un álbum profundamente personal y reflexivo que muestra una de las facetas más emocionales y maduras de la banda.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
+
+      <section class="detalles" id="cd7">
+        <h3>Twenty One Pilots - Blurryface</h3>
+        <p>El exitoso álbum conceptual que fusiona múltiples géneros para explorar las inseguridades a través de un sonido inconfundible.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
+
+      <section class="detalles" id="cd8">
+        <h3>Twenty One Pilots - Breach</h3>
+        <p>Una excelente adición a la colección de llaveros para llevar siempre contigo un pedazo del universo musical del dúo.</p>
+        <a class="btn" href="#" target="_blank" rel="noopener">Comprar ahora</a>
+      </section>
     </div>
+
+    <section class="faq-section" id="faq">
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>¿Es compatible con mi teléfono?</summary>
+          <p>Sí, la mayoría de los smartphones modernos (iPhone 7 en adelante y casi todos los Android con NFC) son compatibles sin necesidad de apps adicionales.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Hacen envíos a regiones?</summary>
+          <p>Realizamos envíos a todo Chile a través de Starken o Chilexpress, con seguimiento en tiempo real.</p>
+        </details>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
