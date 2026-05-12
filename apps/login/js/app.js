@@ -72,9 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- PROCESAR REGISTRO ---
     document.getElementById('form-registro').onsubmit = (e) => {
         e.preventDefault();
+        
+        const correo = document.getElementById('reg-correo').value;
+        if(!validarCorreo(correo)) {
+            feedback('feedback-registro', "Formato de correo inválido.", 'error');
+            return;
+        }
+
         const res = registrarUsuario(
-            document.getElementById('reg-nombre').value,
-            document.getElementById('reg-correo').value,
+            limpiarEntrada(document.getElementById('reg-nombre').value),
+            correo,
             document.getElementById('reg-pass').value
         );
         feedback('feedback-registro', res.mensaje, res.exito ? 'exito' : 'error');
@@ -121,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "../login/imagenes/imagen1.jpg",
         "../login/imagenes/imagen2.webp",
         "../login/imagenes/imagen3.jpg",
-        "../login/imagenes/imagen4.webp",
+        "../login/imagenes/imagen4.jpg",
     ];
     
     let index = 0;
@@ -129,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervaloCarrusel;
 
     function cambiarImagen(direccion) {
-        //suave de transición
+        // Suave transición
         imgEl.style.opacity = 0;
         
         setTimeout(() => {
@@ -139,14 +146,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 index = (index - 1 + imagenes.length) % imagenes.length;
             }
             imgEl.src = imagenes[index];
-            imgEl.style.opacity = 1;
+            imgEl.style.opacity = 0.8; // Coincide con la opacidad en el CSS
         }, 250); 
     }
 
     function iniciarCarrusel() {
         intervaloCarrusel = setInterval(() => {
             cambiarImagen('sig');
-        }, 3000); // Avanza cada 3 segundos
+        }, 3000); 
     }
 
     function reiniciarIntervalo() {

@@ -11,9 +11,3 @@ function limpiarEntrada(texto) {
     div.textContent = texto;
     return div.innerHTML; 
 }
-
-function limpiarEntrada(texto) {
-    const div = document.createElement('div');
-    div.textContent = texto;
-    return div.innerHTML;
-}
