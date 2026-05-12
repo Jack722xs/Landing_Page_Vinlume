@@ -1,0 +1,87 @@
+:root {
+    --bg-color: #030407;
+    --text-main: #f4f5f8;
+    --text-muted: #8b95b1;
+    --accent-3: #00d4ff;
+    --success: #00ff88;
+    --error: #ff5f56;
+    --glass-bg: rgba(255, 255, 255, 0.04);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+/* NAVBAR */
+.navbar { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 0; background: rgba(3,4,7,0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+.nav-logo { font-family: 'Syne', sans-serif; font-size: 1.5rem; text-decoration: none; font-weight: 800; letter-spacing: 2px;}
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a { color: var(--text-muted); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+
+/* ULTRA HOLO EFFECT */
+.ultra-holo {
+    background: linear-gradient(110deg, #ff007f, #7928ca, #00d4ff, #42ff7b, #ffbf00, #ff007f);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: ultraHoloFlow 3s linear infinite;
+}
+@keyframes ultraHoloFlow { to { background-position: -200% center; } }
+
+/* VISTAS & PANELES */
+.vista-oculta { display: none !important; }
+.section-padding { padding: 10rem 2rem 5rem; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.glass-panel { background: var(--glass-bg); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 3rem; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+.form-box { width: 100%; max-width: 450px; text-align: center; }
+
+/* MENSAJES DE FEEDBACK PERFECTAMENTE CENTRADOS */
+.mensaje-feedback { 
+    display: none; 
+    padding: 0.8rem; 
+    margin: 0 auto 1.5rem auto; 
+    width: 100%;
+    border-radius: 8px; 
+    font-weight: 600; 
+    font-size: 0.85rem;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+@keyframes slideIn { from { transform: translateY(-10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.mensaje-exito { background: rgba(0, 255, 136, 0.1); border: 1px solid var(--success); color: var(--success); }
+.mensaje-error { background: rgba(255, 95, 86, 0.1); border: 1px solid var(--error); color: var(--error); }
+
+/* INPUTS & BOTONES */
+.input-group { margin-bottom: 1.2rem; text-align: left; }
+.input-group label { display: block; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.5rem; }
+.input-group input, textarea { width: 100%; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 12px; color: #fff; border-radius: 8px; }
+.btn { background: #fff; color: #000; padding: 12px 24px; border-radius: 50px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
+.btn:hover { background: var(--accent-3); transform: scale(1.05); }
+.btn-full { width: 100%; margin-top: 1rem; }
+.outline-btn { background: transparent; color: #fff; border: 1px solid #fff; padding: 8px 20px; border-radius: 50px; cursor: pointer; }
+.outline-btn:hover { background: #fff; color: #000; }
+.btn-peligro { border-color: var(--error); color: var(--error); }
+.btn-peligro:hover { background: var(--error); color: #fff; border-color: var(--error); }
+
+.switch-text { margin-top: 1.5rem; color: var(--text-muted); font-size: 0.85rem; }
+.switch-text a { color: var(--accent-3); text-decoration: none; }
+
+/* CARRUSEL AJUSTADO (AQUÍ SE ARREGLA LA IMAGEN GIGANTE) */
+.carrusel-container { text-align: center; max-width: 600px; width: 100%; margin: 0 auto; }
+.carrusel-img-box { 
+    width: 100%; 
+    height: 350px; /* Este es el límite de altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0; 
+    border-radius: 12px; 
+    background: rgba(0,0,0,0.5); /* Fondo oscuro por si la imagen es vertical */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.carrusel-img-box img { 
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; /* Ajusta sin deformar ni recortar */
+    transition: opacity 0.4s ease;
+}
+.controles { display: flex; justify-content: center; gap: 1rem; }

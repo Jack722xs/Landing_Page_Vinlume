@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinlume - Acceso Seguro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Syne:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <a href="#" class="nav-logo ultra-holo">VINLUME</a>
+            <ul class="nav-links">
+                <li><a href="#" id="nav-inicio">Inicio</a></li>
+                <li><a href="#" id="nav-contacto">Contacto</a></li>
+                
+                <li><button id="btn-login-menu" class="outline-btn">Acceso / Registro</button></li>
+                <li><button id="btn-logout" class="outline-btn btn-peligro" style="display: none;">Cerrar Sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vista-carrusel" class="section-padding vista-activa">
+            <div class="glass-panel carrusel-container">
+                <h2 class="ultra-holo">Catálogo Vinlume</h2>
+                
+                <div class="carrusel-img-box">
+                    <img id="img-carrusel" src="../login/imagenes/imagen1.jpg" alt="Producto Vinlume">
+                </div>
+                
+                <div class="controles">
+                    <button id="btn-ant" class="btn">Anterior</button>
+                    <button id="btn-sig" class="btn">Siguiente</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="vista-auth" class="section-padding vista-oculta">
+            <div class="glass-panel form-box">
+                <div id="caja-login">
+                    <h2 class="ultra-holo">Iniciar Sesión</h2>
+                    
+                    <div id="feedback-login" class="mensaje-feedback"></div>
+                    
+                    <form id="form-login">
+                        <div class="input-group">
+                            <label for="log-correo">Correo</label>
+                            <input type="email" id="log-correo" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="log-pass">Contraseña</label>
+                            <input type="password" id="log-pass" required>
+                        </div>
+                        <button type="submit" class="btn btn-full">Entrar</button>
+                    </form>
+                    <p class="switch-text">¿No tienes cuenta? <a href="#" id="ir-registro">Regístrate</a></p>
+                </div>
+
+                <div id="caja-registro" style="display: none;">
+                    <h2 class="ultra-holo">Crear Cuenta</h2>
+                    
+                    <div id="feedback-registro" class="mensaje-feedback"></div>
+
+                    <form id="form-registro">
+                        <div class="input-group">
+                            <label for="reg-nombre">Nombre</label>
+                            <input type="text" id="reg-nombre" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="reg-correo">Correo</label>
+                            <input type="email" id="reg-correo" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="reg-pass">Contraseña</label>
+                            <input type="password" id="reg-pass" required>
+                        </div>
+                        <button type="submit" class="btn btn-full">Registrarse</button>
+                    </form>
+                    <p class="switch-text">¿Ya tienes cuenta? <a href="#" id="ir-login">Inicia Sesión</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vista-contacto" class="section-padding vista-oculta">
+            <div class="glass-panel form-box">
+                <h2 class="ultra-holo">Contacto</h2>
+                <div id="feedback-contacto" class="mensaje-feedback"></div>
+                <form id="form-contacto">
+                    <div class="input-group">
+                        <label for="cont-nombre">Nombre</label>
+                        <input type="text" id="cont-nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cont-correo">Correo</label> <input type="email" id="cont-correo" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cont-mensaje">Mensaje</label>
+                        <textarea id="cont-mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-full">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Vinlume Disk - Ingeniería Informática</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
